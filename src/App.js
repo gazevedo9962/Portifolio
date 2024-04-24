@@ -29,6 +29,10 @@ import Presentation from "layouts/pages/presentation";
 // Material Kit 2 React routes
 import routes from "routes";
 
+//import HeaderOne from "Testes/Header/HeaderOne";
+import ResponsiveDrawer from "Testes/DrawerResponsive/DrawerResponsive";
+import AnchorTemporaryDrawer from "Testes/DrawerAnchor/AnchorTemporaryDrawer";
+
 export default function App() {
   const { pathname } = useLocation();
 
@@ -57,6 +61,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} />
+        <Route path="/testes" element={<ResponsiveDrawer />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
     </ThemeProvider>
