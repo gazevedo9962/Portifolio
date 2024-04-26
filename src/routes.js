@@ -67,6 +67,14 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
+import AnchorTemporaryDrawer from "Testes/DrawerAnchor/AnchorTemporaryDrawer";
+import ResponsiveDrawer from "Testes/DrawerResponsive/DrawerResponsive";
+import SwipeableEdgeDrawer from "Testes/SwipeableDrawer/SwipeableDrawer";
+import LayoutTeste1 from "Testes/Layout/LayoutTeste1";
+import Blog from "material-ui/docs/data/material/getting-started/templates/blog/Blog"
+//Icons
+
+//import DeleteIcon from '@mui/icons-material/Delete';
 
 const routes = [
   {
@@ -269,6 +277,49 @@ const routes = [
     icon: <GitHubIcon />,
     href: "https://www.github.com/creativetimofficial/material-kit-react",
   },
+  {
+    name: "testes",
+    description: "Fazer testes de components",
+    collapse: [
+      {
+        name: "drawer material ui",
+        description: "testes drawer material ui",
+        collapse: [
+          {
+            name: "AnchorTemporaryDrawer",
+            route: "/testes/drawer/anchor-temporary-drawer",
+            component: <AnchorTemporaryDrawer />,
+          },
+          {
+            name: "DrawerResponsive",
+            route: "/testes/drawer/drawer-responsive",
+            component: <ResponsiveDrawer />,
+          },
+          {
+            name: "SwipeableEdgeDrawer",
+            route: "/testes/drawer/swipeable-edge-drawer",
+            component: <SwipeableEdgeDrawer />,
+          },
+        ],
+      },
+      {
+        name: "layout material ui",
+        description: "testes layout material ui",
+        collapse: [
+          {
+            name: "Layout Teste 1",
+            route: "/testes/layout/1",
+            component: <LayoutTeste1 />,
+          },
+          {
+            name: "Layout Teste 2",
+            route: "/testes/layout/blog",
+            component: <Blog />,
+          },
+        ],
+      }
+    ]
+    }
 ];
 
 export default routes;
